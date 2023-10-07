@@ -23,8 +23,8 @@
 		"eject": "react-scripts eject",
 		"lint": "eslint --fix --ext .ts,.tsx .",
 		"format": "prettier --write \"./**/*.{ts,tsx,json,md,css,scss,html}\"",
-		"precommit": "npm run prettier:write",
-		"prettier:write": "prettier --write \"./**/*.{ts,tsx,json,md,css,scss,html}\""
+		"pre-commit": "npm run lint",
+    	"pre-push": "npm run test && npm run build"
 	},
 	"eslintConfig": {
 		"extends": [
