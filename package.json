@@ -23,18 +23,14 @@
 		"eject": "react-scripts eject",
 		"lint": "eslint --fix --ext .ts,.tsx .",
 		"format": "prettier --write \"./**/*.{ts,tsx,json,md,css,scss,html}\"",
+		"precommit": "npm run lint",
+    	"prepush": "npm run test && npm run build"
 	},
 	"eslintConfig": {
 		"extends": [
 			"react-app",
 			"react-app/jest"
 		]
-	},
-	"husky": {
-		"hooks": {
-		"pre-commit": "npm run lint",
-		"pre-push": "npm run test && npm run build"
-		}
 	},
 	"browserslist": {
 		"production": [
