@@ -22,7 +22,9 @@
 		"test": "react-scripts test --watchAll",
 		"eject": "react-scripts eject",
 		"lint": "eslint --fix --ext .ts,.tsx .",
-		"format": "prettier --write \"./**/*.{ts,tsx,json,md,css,scss,html}\""
+		"format": "prettier --write \"./**/*.{ts,tsx,json,md,css,scss,html}\"",
+		"precommit": "npm run prettier:write",
+		"prettier:write": "prettier --write \"./**/*.{ts,tsx,json,md,css,scss,html}\""
 	},
 	"eslintConfig": {
 		"extends": [
@@ -49,6 +51,7 @@
 		"eslint-config-airbnb-typescript": "^17.1.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-prettier": "^5.0.0",
+		"husky": "^8.0.3",
 		"prettier": "^3.0.3"
 	}
 }
