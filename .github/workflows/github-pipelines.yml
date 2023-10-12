@@ -1,24 +1,16 @@
 name: Github Pipelines
-
-on:
-  push:
-    branches:
-      - '*'
-
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
-
+        uses: actions/checkout@v4
       - name: Lint
         run: npm run lint  
-
       - name: Test
         run: npm test
-
       - name: Build
         run: npm run build  
 
