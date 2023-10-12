@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: 14
       - name: Lint
-        run: eslint . --ext .js,.jsx,.ts,.tsx  
+        run: ./node_modules/.bin/eslint . --ext .js,.jsx,.ts,.tsx 
       - name: Test
         run: npm test
       - name: Build
