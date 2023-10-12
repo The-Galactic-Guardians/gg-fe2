@@ -3,7 +3,7 @@ name: Github Pipelines
 on:
   push:
     branches:
-      - feat/GG-9-gtihub-pipelines
+      - '*'
 
 jobs:
   build:
