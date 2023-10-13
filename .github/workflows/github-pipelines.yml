@@ -10,7 +10,7 @@ jobs:
       - name: Lint
         run: npm install && npm run lint
       - name: Test
-        run: npm install --save-dev @babel/plugin-proposal-private-property-in-object && npm test
+        run: npm install && npm test:ci
       - name: Build
-        run: npm run build  
+        run: npm install && npm run build  
 
