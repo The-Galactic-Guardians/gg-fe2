@@ -1,10 +1,18 @@
 import React from "react";
 
-function Notes() {
+type NotesProps = {
+	notes: string;
+};
+
+function Notes({ notes }: NotesProps) {
 	return (
-		<section className="mb-5">
+		<section className=" mt-10 mb-5">
 			{/* {Text Area} */}
-			<p>Aditional Notes...</p>
+			<div className="flex items-baseline">
+				<p className="p-1 text-lg font-bold mr-2">Notes:</p>
+				<p className="text-xs text-gray-500">(Optional)</p>
+			</div>
+			<p className="p-1 text-sm break-words">{notes}</p>
 		</section>
 	);
 }
