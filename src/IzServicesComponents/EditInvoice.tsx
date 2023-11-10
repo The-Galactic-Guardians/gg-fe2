@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { MyContext } from "../MyContext";
+import Search from "./Search";
 
 const services = [
 	{ name: "Address Change", price: 10.0 },
@@ -245,12 +246,14 @@ function EditInvoice() {
 			</label>
 
 			<button
-				onClick={() => navigate("/iz-services-preview-invoice")}
+				onClick={() => navigate("/iz-services/preview-invoice")}
 				type="button"
 				className="bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover: bg-transparent hover:text-blue-500 transition-all duration-300"
 			>
 				Preview Invoice
 			</button>
+
+			<Search />
 		</div>
 	);
 }
