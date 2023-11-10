@@ -5,6 +5,7 @@ import Home from "./Home";
 import PreviewInvoice from "./IzServicesComponents/PreviewInvoice";
 import EditInvoice from "./IzServicesComponents/EditInvoice";
 import { MyContext } from "./MyContext";
+import Search from "./IzServicesComponents/Search";
 
 function App() {
 	const [clientName, setClientName] = useState("");
@@ -20,6 +21,7 @@ function App() {
 		{ name: "", price: 0 },
 	]);
 	const [paymentMethod, setPaymentMethod] = useState("");
+	const [searchQuery, setSearchQuery] = useState("");
 
 	const contextValue = useMemo(
 		() => ({
@@ -45,6 +47,8 @@ function App() {
 			setSelectedServices,
 			paymentMethod,
 			setPaymentMethod,
+			searchQuery,
+			setSearchQuery,
 		}),
 		[
 			clientName,
@@ -58,6 +62,7 @@ function App() {
 			notes,
 			selectedServices,
 			paymentMethod,
+			searchQuery,
 		],
 	);
 
@@ -66,10 +71,11 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route
-					path="/iz-services-preview-invoice"
+					path="/iz-services/preview-invoice"
 					element={<PreviewInvoice />}
 				/>
 				<Route path="/iz-services" element={<EditInvoice />} />
+				<Route path="/iz-services/search" element={<Search />} />
 			</Routes>
 		</MyContext.Provider>
 	);
