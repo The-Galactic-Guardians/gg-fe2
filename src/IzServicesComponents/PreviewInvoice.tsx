@@ -87,13 +87,22 @@ function PreviewInvoice() {
 				{/* {Notes} */}
 				<Notes notes={notes} />
 				{/* {End of Notes} */}
-				<button
-					type="button"
-					onClick={() => navigate("/iz-services")}
-					className="bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover: bg-transparent hover:text-blue-500 transition-all duration-300"
-				>
-					Edit Invoice
-				</button>
+				<div className="flex justify-between items-center mt-4">
+					<button
+						type="button"
+						onClick={() => navigate("/iz-services")}
+						className="bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover: bg-transparent hover:text-blue-500 transition-all duration-300"
+					>
+						Edit Invoice
+					</button>
+					<button
+						type="button"
+						onClick={() => navigate("/iz-services")}
+						className="bg-red-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-red-500 hover: bg-transparent hover:text-red-500 transition-all duration-300 ml-auto mr-4"
+					>
+						Save
+					</button>
+				</div>
 			</div>
 		</main>
 	);
