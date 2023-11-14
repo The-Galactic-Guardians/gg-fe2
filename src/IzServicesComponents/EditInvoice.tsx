@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { MyContext } from "../MyContext";
-// import Search from "./Search";
 
 const services = [
 	{ name: "Address Change", price: 10.0 },
