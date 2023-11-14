@@ -6,8 +6,8 @@ import App from "./App";
 
 // Mock out all top level functions, such as get, put, delete and post:
 jest.mock("axios", () => ({
-	get: async () => new Promise(() => { }),
-	post: async () => new Promise(() => { }),
+	get: async () => new Promise(() => {}),
+	post: async () => new Promise(() => {}),
 }));
 
 test("renders learn react link", () => {
