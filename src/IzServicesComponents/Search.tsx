@@ -1,11 +1,6 @@
 import React from "react";
-// import { useNavigate } from "react-router-dom";
-// import axios from "axios";
-// import { MyContext } from "../MyContext";
 
 function Search() {
-	// const navigate = useNavigate();
-
 	return (
 		<div className="flex flex-col items-center justify-start min-h-screen">
 			<h2 className="mt-10 text-4xl">
