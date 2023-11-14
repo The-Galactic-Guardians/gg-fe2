@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { MyContext } from "../MyContext";
-import Search from "./Search";
+// import Search from "./Search";
 
 const services = [
 	{ name: "Address Change", price: 10.0 },
@@ -203,7 +203,7 @@ function EditInvoice() {
 							<button
 								onClick={() => handleRemoveService(index)}
 								type="button"
-								className="bg-red-300 rounded shadow border-2 border-red-300 hover: bg-transparent hover:text-red-300 transition-all duration-300"
+								className="mt-1 bg-red-300 rounded shadow border-2 border-red-300 hover: bg-transparent hover:text-red-300 transition-all duration-300"
 							>
 								Remove
 							</button>
@@ -213,7 +213,7 @@ function EditInvoice() {
 				<button
 					onClick={handleAddService}
 					type="button"
-					className="bg-green-300 rounded shadow border-2 border-green-300 hover: bg-transparent hover:text-green-300 transition-all duration-300"
+					className="mt-1 bg-green-300 rounded shadow border-2 border-green-300 hover: bg-transparent hover:text-green-300 transition-all duration-300"
 				>
 					Add Service
 				</button>
@@ -253,7 +253,29 @@ function EditInvoice() {
 				Preview Invoice
 			</button>
 
-			<Search />
+			<button
+				type="button"
+				className="mt-4 bg-gray-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-gray-500 hover: bg-transparent hover:text-gray-500 transition-all duration-300"
+				onClick={() => navigate("/iz-services/search")}
+			>
+				Search
+			</button>
+
+			<button
+				type="button"
+				className="mt-4 bg-green-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-green-500 hover: bg-transparent hover:text-green-500 transition-all duration-300"
+				onClick={() => navigate("/iz-services/update")}
+			>
+				Update
+			</button>
+
+			<button
+				type="button"
+				className="mt-4 bg-red-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-red-500 hover: bg-transparent hover:text-red-500 transition-all duration-300"
+				onClick={() => navigate("/iz-services/delete")}
+			>
+				Delete
+			</button>
 		</div>
 	);
 }
