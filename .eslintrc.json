@@ -21,6 +21,3 @@
 		] 
 	}
 }
-
-
-// allow console.info console.error and console.warn - error for console.log
