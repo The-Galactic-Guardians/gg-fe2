@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { MyContext } from "../MyContext";
 import Notes from "./Notes";
@@ -40,6 +41,40 @@ function PreviewInvoice() {
 		const newPrice = Number(event.target.value);
 		newSelectedServices[index].price = newPrice;
 		setSelectedServices(newSelectedServices);
+	};
+
+	const handleSaveInvoice = () => {
+		const invoiceData = {
+			clientName,
+			companyName,
+			phoneNumber,
+			emailAddress,
+			vinNumber,
+			carMake,
+			carModel,
+			services: selectedServices.map((service) => service.name).join(", "),
+			amount: selectedServices.map((service) => ({
+				name: service.name,
+				price: service.price,
+			})),
+			total: selectedServices.reduce(
+				(total, service) => total + service.price,
+				0,
+			),
+			paymentMethod,
+			notes,
+			rep,
+		};
+
+		axios
+			.post("http://localhost:8000/save-invoice", invoiceData)
+			.then((response) => {
+				console.info("Invoice was successfully saved: ", response.data);
+				navigate("/iz-services");
+			})
+			.catch((error) => {
+				console.error("Error saving Invoice: ", error);
+			});
 	};
 
 	return (
@@ -97,7 +132,7 @@ function PreviewInvoice() {
 					</button>
 					<button
 						type="button"
-						onClick={() => navigate("/iz-services")}
+						onClick={handleSaveInvoice}
 						className="bg-red-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-red-500 hover: bg-transparent hover:text-red-500 transition-all duration-300 ml-auto mr-4"
 					>
 						Save

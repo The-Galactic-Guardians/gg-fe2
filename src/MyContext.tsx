@@ -13,7 +13,6 @@ export const MyContext = createContext({
 	notes: "",
 	selectedServices: [{ name: "", price: 0 }],
 	paymentMethod: "",
-    searchQuery: "",
 	setClientName: (_name: string) => {},
 	setCompanyName: (_name: string) => {},
 	setPhoneNumber: (_number: string) => {},
@@ -25,5 +24,4 @@ export const MyContext = createContext({
 	setNotes: (_notes: string) => {},
 	setSelectedServices: (_services: { name: string; price: number }[]) => {},
 	setPaymentMethod: (_method: string) => {},
-    setSearchQuery: (_method: string) => { },
 });
