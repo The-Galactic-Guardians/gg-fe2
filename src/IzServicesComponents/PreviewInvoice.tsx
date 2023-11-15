@@ -69,7 +69,7 @@ function PreviewInvoice() {
 		axios
 			.post("http://localhost:8000/save-invoice", invoiceData)
 			.then((response) => {
-				console.log("Invoice was successfully saved: ", response.data);
+				console.info("Invoice was successfully saved: ", response.data);
 				navigate("/iz-services");
 			})
 			.catch((error) => {
