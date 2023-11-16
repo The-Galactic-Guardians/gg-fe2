@@ -252,29 +252,31 @@ function EditInvoice() {
 				Preview Invoice
 			</button>
 
-			<button
-				type="button"
-				className="mt-4 bg-gray-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-gray-500 hover: bg-transparent hover:text-gray-500 transition-all duration-300"
-				onClick={() => navigate("/iz-services/search")}
-			>
-				Search
-			</button>
+			<div className="absolute top-0 right-0 space-x-2 p-4">
+				<button
+					type="button"
+					className="bg-gray-500 text-white font-bold py-2 px-6 text-base rounded shadow border border-gray-500 hover:bg-transparent hover:text-gray-500 transition-all duration-300"
+					onClick={() => navigate("/iz-services/search")}
+				>
+					Search
+				</button>
 
-			<button
-				type="button"
-				className="mt-4 bg-green-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-green-500 hover: bg-transparent hover:text-green-500 transition-all duration-300"
-				onClick={() => navigate("/iz-services/update")}
-			>
-				Update
-			</button>
+				<button
+					type="button"
+					className="bg-green-500 text-white font-bold py-2 px-6 text-base rounded shadow border border-green-500 hover:bg-transparent hover:text-green-500 transition-all duration-300"
+					onClick={() => navigate("/iz-services/update")}
+				>
+					Update
+				</button>
 
-			<button
-				type="button"
-				className="mt-4 bg-red-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-red-500 hover: bg-transparent hover:text-red-500 transition-all duration-300"
-				onClick={() => navigate("/iz-services/delete")}
-			>
-				Delete
-			</button>
+				<button
+					type="button"
+					className="bg-red-500 text-white font-bold py-2 px-6 text-base rounded shadow border border-red-500 hover:bg-transparent hover:text-red-500 transition-all duration-300"
+					onClick={() => navigate("/iz-services/delete")}
+				>
+					Delete
+				</button>
+			</div>
 		</div>
 	);
 }
